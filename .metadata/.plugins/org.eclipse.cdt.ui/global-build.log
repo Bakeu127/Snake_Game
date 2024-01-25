@@ -1,0 +1,1895 @@
+08:46:17 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  53548	    252	  18396	  72196	  11a04	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+08:46:25 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  53548	    252	  18396	  72196	  11a04	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+08:53:30 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:111:13: error: static declaration of 'MX_GPIO_Init' follows non-static declaration
+  111 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:30:
+../Core/Inc/gpio.h:38:6: note: previous declaration of 'MX_GPIO_Init' was here
+   38 | void MX_GPIO_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:112:13: error: static declaration of 'MX_CRC_Init' follows non-static declaration
+  112 | static void MX_CRC_Init(void);
+      |             ^~~~~~~~~~~
+In file included from ../Core/Src/main.c:22:
+../Core/Inc/crc.h:40:6: note: previous declaration of 'MX_CRC_Init' was here
+   40 | void MX_CRC_Init(void);
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:113:13: error: static declaration of 'MX_DMA2D_Init' follows non-static declaration
+  113 | static void MX_DMA2D_Init(void);
+      |             ^~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:23:
+../Core/Inc/dma2d.h:40:6: note: previous declaration of 'MX_DMA2D_Init' was here
+   40 | void MX_DMA2D_Init(void);
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:114:13: error: static declaration of 'MX_TIM2_Init' follows non-static declaration
+  114 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/tim.h:41:6: note: previous declaration of 'MX_TIM2_Init' was here
+   41 | void MX_TIM2_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:115:13: error: static declaration of 'MX_TIM3_Init' follows non-static declaration
+  115 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/tim.h:42:6: note: previous declaration of 'MX_TIM3_Init' was here
+   42 | void MX_TIM3_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:116:13: error: static declaration of 'MX_RNG_Init' follows non-static declaration
+  116 | static void MX_RNG_Init(void);
+      |             ^~~~~~~~~~~
+In file included from ../Core/Src/main.c:26:
+../Core/Inc/rng.h:40:6: note: previous declaration of 'MX_RNG_Init' was here
+   40 | void MX_RNG_Init(void);
+      |      ^~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:348:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  348 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:353:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  353 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:111:13: warning: 'MX_GPIO_Init' used but never defined
+  111 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:112:13: warning: 'MX_CRC_Init' used but never defined
+  112 | static void MX_CRC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:113:13: warning: 'MX_DMA2D_Init' used but never defined
+  113 | static void MX_DMA2D_Init(void);
+      |             ^~~~~~~~~~~~~
+../Core/Src/main.c:114:13: warning: 'MX_TIM2_Init' used but never defined
+  114 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:115:13: warning: 'MX_TIM3_Init' used but never defined
+  115 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:116:13: warning: 'MX_RNG_Init' used but never defined
+  116 | static void MX_RNG_Init(void);
+      |             ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+08:53:46 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:342:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  342 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:347:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  347 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  53548	    252	  18396	  72196	  11a04	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:03:10 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:342:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  342 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:347:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  347 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  53548	    252	  18396	  72196	  11a04	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:03:52 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:342:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  342 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:347:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  347 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  53548	    252	  18396	  72196	  11a04	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:04:37 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:342:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  342 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:347:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  347 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  53548	    252	  18396	  72196	  11a04	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:05:55 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:342:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  342 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:347:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  347 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  53548	    252	  18396	  72196	  11a04	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:09:04 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c:112:13: error: static declaration of 'MX_GPIO_Init' follows non-static declaration
+  112 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:30:
+../Core/Inc/gpio.h:38:6: note: previous declaration of 'MX_GPIO_Init' was here
+   38 | void MX_GPIO_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:113:13: error: static declaration of 'MX_CRC_Init' follows non-static declaration
+  113 | static void MX_CRC_Init(void);
+      |             ^~~~~~~~~~~
+In file included from ../Core/Src/main.c:22:
+../Core/Inc/crc.h:40:6: note: previous declaration of 'MX_CRC_Init' was here
+   40 | void MX_CRC_Init(void);
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:114:13: error: static declaration of 'MX_DMA2D_Init' follows non-static declaration
+  114 | static void MX_DMA2D_Init(void);
+      |             ^~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:23:
+../Core/Inc/dma2d.h:40:6: note: previous declaration of 'MX_DMA2D_Init' was here
+   40 | void MX_DMA2D_Init(void);
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:115:13: error: static declaration of 'MX_TIM2_Init' follows non-static declaration
+  115 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/tim.h:41:6: note: previous declaration of 'MX_TIM2_Init' was here
+   41 | void MX_TIM2_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:116:13: error: static declaration of 'MX_TIM3_Init' follows non-static declaration
+  116 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/tim.h:42:6: note: previous declaration of 'MX_TIM3_Init' was here
+   42 | void MX_TIM3_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:117:13: error: static declaration of 'MX_RNG_Init' follows non-static declaration
+  117 | static void MX_RNG_Init(void);
+      |             ^~~~~~~~~~~
+In file included from ../Core/Src/main.c:26:
+../Core/Inc/rng.h:40:6: note: previous declaration of 'MX_RNG_Init' was here
+   40 | void MX_RNG_Init(void);
+      |      ^~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:236:28: error: 'LTDC_ACTIVE_LAYER' undeclared (first use in this function)
+  236 |   BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER,LCD_FRAME_BUFFER);
+      |                            ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:236:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:272:18: error: 'TS_StateTypeDef' {aka 'struct <anonymous>'} has no member named 'touchDetected'; did you mean 'TouchDetected'?
+  272 |    if ( TS_State.touchDetected ) {
+      |                  ^~~~~~~~~~~~~
+      |                  TouchDetected
+../Core/Src/main.c:273:23: error: 'TS_StateTypeDef' {aka 'struct <anonymous>'} has no member named 'touchX'
+  273 |     float X = TS_State.touchX[0];
+      |                       ^
+../Core/Src/main.c:274:23: error: 'TS_StateTypeDef' {aka 'struct <anonymous>'} has no member named 'touchY'
+  274 |     float Y = TS_State.touchY[0];
+      |                       ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:346:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  346 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:351:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  351 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:112:13: warning: 'MX_GPIO_Init' used but never defined
+  112 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:113:13: warning: 'MX_CRC_Init' used but never defined
+  113 | static void MX_CRC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:114:13: warning: 'MX_DMA2D_Init' used but never defined
+  114 | static void MX_DMA2D_Init(void);
+      |             ^~~~~~~~~~~~~
+../Core/Src/main.c:115:13: warning: 'MX_TIM2_Init' used but never defined
+  115 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:116:13: warning: 'MX_TIM3_Init' used but never defined
+  116 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:117:13: warning: 'MX_RNG_Init' used but never defined
+  117 | static void MX_RNG_Init(void);
+      |             ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+09:09:26 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:230:28: error: 'LTDC_ACTIVE_LAYER' undeclared (first use in this function)
+  230 |   BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER,LCD_FRAME_BUFFER);
+      |                            ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:230:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:266:18: error: 'TS_StateTypeDef' {aka 'struct <anonymous>'} has no member named 'touchDetected'; did you mean 'TouchDetected'?
+  266 |    if ( TS_State.touchDetected ) {
+      |                  ^~~~~~~~~~~~~
+      |                  TouchDetected
+../Core/Src/main.c:267:23: error: 'TS_StateTypeDef' {aka 'struct <anonymous>'} has no member named 'touchX'
+  267 |     float X = TS_State.touchX[0];
+      |                       ^
+../Core/Src/main.c:268:23: error: 'TS_StateTypeDef' {aka 'struct <anonymous>'} has no member named 'touchY'
+  268 |     float Y = TS_State.touchY[0];
+      |                       ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+09:09:53 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:230:28: error: 'LTDC_ACTIVE_LAYER' undeclared (first use in this function)
+  230 |   BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER,LCD_FRAME_BUFFER);
+      |                            ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:230:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+make: *** [Core/Src/subdir.mk:64: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+09:10:42 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51196	    252	  17940	  69388	  10f0c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:11:52 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51196	    252	  17940	  69388	  10f0c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:13:09 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51196	    252	  17940	  69388	  10f0c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:13:43 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51196	    252	  17940	  69388	  10f0c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:18:03 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51196	    252	  17940	  69388	  10f0c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:18:52 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51196	    252	  17940	  69388	  10f0c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:21:51 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51196	    252	  17940	  69388	  10f0c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:32:12 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49080	    252	  17940	  67272	  106c8	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:38:05 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49248	    252	  17940	  67440	  10770	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:40:29 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86: warning: "LCD_FRAME_BUFFER" redefined
+   86 | #define LCD_FRAME_BUFFER          SDRAM_DEVICE_ADDR
+      | 
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:93: note: this is the location of the previous definition
+   93 | #define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+      | 
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:340:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  340 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:345:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  345 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49300	    252	  17940	  67492	  107a4	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:42:47 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49300	    252	  17940	  67492	  107a4	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:45:03 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49300	    252	  17940	  67492	  107a4	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+09:45:19 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49300	    252	  17940	  67492	  107a4	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+09:45:45 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49300	    252	  17940	  67492	  107a4	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+09:46:55 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49300	    252	  17940	  67492	  107a4	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+09:47:36 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49300	    252	  17940	  67492	  107a4	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:49:34 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49224	    252	  17940	  67416	  10758	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:57:15 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:269:23: warning: comparison of constant '50' with boolean expression is always true [-Wbool-compare]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                       ^
+../Core/Src/main.c:269:19: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                 ~~^~~
+../Core/Src/main.c:269:41: warning: comparison of constant '190' with boolean expression is always true [-Wbool-compare]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                                         ^
+../Core/Src/main.c:269:37: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                                  ~~~^~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49168	    252	  17940	  67360	  10720	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:58:11 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:269:23: warning: comparison of constant '50' with boolean expression is always true [-Wbool-compare]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                       ^
+../Core/Src/main.c:269:19: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                 ~~^~~
+../Core/Src/main.c:269:41: warning: comparison of constant '190' with boolean expression is always true [-Wbool-compare]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                                         ^
+../Core/Src/main.c:269:37: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  269 |            if ((0 < b < 50)  && (50 < a < 190 )  && ( dir[1] != UP )) {
+      |                                  ~~~^~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49168	    252	  17940	  67360	  10720	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:59:03 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49244	    252	  17940	  67436	  1076c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+10:00:50 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:271:32: warning: comparison of constant '202' with boolean expression is always true [-Wbool-compare]
+  271 |            } else if ((40 <  a < 202 )  && (b <= 60 )  && ( dir[1] != DOWN )) {
+      |                                ^
+../Core/Src/main.c:271:27: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  271 |            } else if ((40 <  a < 202 )  && (b <= 60 )  && ( dir[1] != DOWN )) {
+      |                        ~~~^~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49208	    252	  17940	  67400	  10748	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+10:02:15 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49244	    252	  17940	  67436	  1076c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+10:07:38 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49244	    252	  17940	  67436	  1076c	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+10:08:55 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:339:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  339 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:344:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  344 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49248	    252	  17940	  67440	  10770	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+10:09:22 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49248	    252	  17940	  67440	  10770	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+08:11:02 **** Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49248	    252	  17940	  67440	  10770	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:13:19 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.d" -MT"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_eeprom.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_eeprom.d" -MT"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_eeprom.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_eeprom.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_gyroscope.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_gyroscope.d" -MT"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_gyroscope.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_gyroscope.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_io.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_io.d" -MT"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_io.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_io.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.d" -MT"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.d" -MT"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.d" -MT"Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o"
+arm-none-eabi-gcc "../Core/Src/crc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/crc.d" -MT"Core/Src/crc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/crc.o"
+arm-none-eabi-gcc "../Core/Src/dma2d.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dma2d.d" -MT"Core/Src/dma2d.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma2d.o"
+arm-none-eabi-gcc "../Core/Src/fmc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fmc.d" -MT"Core/Src/fmc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/fmc.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc "../Core/Src/ltdc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/ltdc.d" -MT"Core/Src/ltdc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ltdc.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/rng.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/rng.d" -MT"Core/Src/rng.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rng.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:311:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  311 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:316:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  316 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+At top level:
+../Core/Src/main.c:97:25: warning: 'TS_State' defined but not used [-Wunused-variable]
+   97 | static TS_StateTypeDef  TS_State;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50780	    252	  18380	  69412	  10f24	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:14:09 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50780	    252	  18380	  69412	  10f24	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+08:15:06 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-size   LCD_USB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50780	    252	  18380	  69412	  10f24	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+08:17:23 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49248	    252	  17940	  67440	  10770	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:31:20 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:41:33 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:46:24 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:51:46 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:54:34 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:55:25 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:56:18 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+08:59:23 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:03:20 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:05:00 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49256	    252	  17940	  67448	  10778	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+09:15:10 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49248	    252	  17940	  67440	  10770	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 

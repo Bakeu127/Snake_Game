@@ -1,0 +1,39 @@
+09:15:10 **** Incremental Build of configuration Debug for project LCD_USB ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/Components" -I"C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/CMSIS/BSP" -I"C:/Users/ASUS/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/BSP" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:338:38: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  338 |    BSP_LCD_DisplayStringAt(150, 100, score, CENTER_MODE);
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:343:37: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
+  343 |     BSP_LCD_DisplayStringAt(0, 136, score, CENTER_MODE);
+      |                                     ^~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Src/main.c:38:
+C:/D/ThuchanhNhungReal/LAB_LCD_USB/LCD_USB/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:200:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  200 | void     BSP_LCD_DisplayStringAt(uint16_t X, uint16_t Y, uint8_t *pText, Text_AlignModeTypdef mode);
+      |                                                          ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LCD_USB.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\D\ThuchanhNhungReal\LAB_LCD_USB\LCD_USB\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_USB.elf
+ 
+arm-none-eabi-size   LCD_USB.elf 
+arm-none-eabi-objdump -h -S  LCD_USB.elf  > "LCD_USB.list"
+arm-none-eabi-objcopy  -O binary  LCD_USB.elf  "LCD_USB.bin"
+   text	   data	    bss	    dec	    hex	filename
+  49248	    252	  17940	  67440	  10770	LCD_USB.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_USB.bin
+ 
+Finished building: LCD_USB.list
+ 
+
+09:15:11 Build Finished. 0 errors, 2 warnings. (took 972ms)
+
